@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Crypter</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+	<style>
+		.form-app {
+			padding-top: 60px;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+
+		form div label {
+			font-weight: 500;
+		}
+
+		#radioButtons {
+			font-weight: 400;
+			text-align: center;
+			padding-left: 285px;
+		}
+
+		#output {
+			text-align: center;
+			padding-top: 60px;
+			color: darkgray;
+		}
+
+		.form-control:focus {
+			border-color: darkgray;
+			box-shadow: inset 0 1px 1px rgba(169, 169, 169, 1), 0 0 8px rgba(169, 169, 169, 1);
+		}
+
+		/* #copyright {
+			font-size: 14px;
+			padding-top: 40px;
+			padding-bottom: 0;
+			text-align: center;
+		} */
+	</style>
+</head>
+
+<body>
+	<!-- TODO: Make this app as beautiful as possible -->
+	<form class="form-app">
+		<div class="form-label-group">
+			<label for="message">Message for encryption: </label>
+			<input type="email" id="message" class="form-control" placeholder="Message for encryption" required autofocus>
+		</div>
+		<br>
+		<div class="form-label-group">
+			<label for="key">Key for encryption: </label>
+			<input type="text" id="key" class="form-control" placeholder="Key" required>
+		</div>
+		<br>
+		<br>
+		<div class="checkbox mb-3">
+			<label id="radioButtons">
+				<input type="radio" name="encrypt_decrypt" value="encrypt-me" checked> Encrypt &nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="encrypt_decrypt" value="decrypt-me"> Decrypt
+			</label>
+		</div>
+		<br>
+		<button class="btn btn-lg btn-dark btn-block" type="submit" id='cryptonyte'>Encrypt</button>
+		<!-- It's best to add copyright and other information into the Info window -->
+		<!-- <p class="mt-5 mb-3 text-muted text-center" id="copyright">&copy; 2018 Ashish H. Shetty</p> -->
+		<p id=output>Encrypted message appears here</p>
+	</form>
+
+
+
+
+
+
+
+
+	<!-- Bootstrap JS -->
+	<!-- jQuery library -->
+	<script src="bootstrap/jquery-3.3.1.min.js"></script>
+	<!-- Popper JS -->
+	<script src="bootstrap/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="bootstrap/bootstrap.min.js"></script>
+	<!-- index.js --our JavaScript file -->
+	<script src="index.js"></script>
+</body>
+
+</html>
