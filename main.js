@@ -12,7 +12,8 @@ function createWindow() {
 	win = new BrowserWindow({
 		width: 800,
 		height: 600,
-		resizable: false
+		resizable: false,
+		icon: 'icon/icon.ico'
 	})
 
 	// and load the index.html of the app.
@@ -36,7 +37,8 @@ function createWindow() {
 			height: 200,
 			resizable: false,
 			autoHideMenuBar: true,
-			parent: win // This sets infoWin as a child window of win (our main app window)
+			parent: win, // This sets infoWin as a child window of win (our main app window)
+			icon: 'icon/icon.ico'
 		})
 		infoWin.loadFile('src/info.html')
 	}

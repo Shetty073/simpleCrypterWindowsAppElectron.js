@@ -1,10 +1,12 @@
 {
   "name": "simplecrypter",
+  "productName": "Simple Crypter App",
   "version": "0.1.0",
   "description": "A simple text encryption app",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-win": "electron-packager . simplecrypter --overwrite --asar --platform=win32 --icon=icon/icon.ico --prune=true --out=release-builds"
   },
   "author": "Ashish H. Shetty",
   "license": "MIT",
@@ -12,6 +14,7 @@
     "electron": "^2.0.7"
   },
   "dependencies": {
+    "asar": "^0.14.3",
     "bootstrap": "^4.1.3",
     "electron-context-menu": "^0.10.0",
     "open": "0.0.5"
