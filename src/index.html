@@ -48,20 +48,20 @@
 	<!-- TODO: Make this app as beautiful as possible -->
 	<form class="form-app">
 		<div class="form-label-group">
-			<label for="message">Message for encryption: </label>
+			<label for="message" id="messageDisplay">Message for encryption:</label>
 			<input type="email" id="message" class="form-control" placeholder="Message for encryption" required autofocus>
 		</div>
 		<br>
 		<div class="form-label-group">
-			<label for="key">Key for encryption: </label>
-			<input type="text" id="key" class="form-control" placeholder="Key" required>
+			<label for="key" id="keyDisplay">Key for encryption:</label>
+			<input type="text" id="key" class="form-control" placeholder="Key for encryption" required>
 		</div>
 		<br>
 		<br>
 		<div class="checkbox mb-3">
 			<label id="radioButtons">
-				<input type="radio" name="encrypt_decrypt" value="encrypt-me" checked> Encrypt &nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="radio" name="encrypt_decrypt" value="decrypt-me"> Decrypt
+				<input type="radio" name="encrypt_decrypt" value="encrypt-me" id="encrypt-me" checked onclick="uiState(0)"><label for="encrypt-me" id="radEn">Encrypt</label>&nbsp;
+				<input type="radio" name="encrypt_decrypt" value="decrypt-me" id="decrypt-me" onclick="uiState(1)"><label for="decrypt-me" id="radDe">Decrypt</label>
 			</label>
 		</div>
 		<br>
