@@ -11,7 +11,8 @@
   "author": "Ashish H. Shetty",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^2.0.7"
+    "electron": "^2.0.7",
+    "electron-winstaller": "^2.6.4"
   },
   "dependencies": {
     "asar": "^0.14.3",
