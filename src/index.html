@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 	<style>
 		.form-app {
-			padding-top: 60px;
+			padding-top: 50px;
 			padding-left: 40px;
 			padding-right: 40px;
 		}
@@ -26,7 +26,7 @@
 
 		#output {
 			text-align: center;
-			padding-top: 60px;
+			padding-top: 45px;
 			color: darkgray;
 		}
 
@@ -35,12 +35,12 @@
 			box-shadow: inset 0 1px 1px rgba(169, 169, 169, 1), 0 0 8px rgba(169, 169, 169, 1);
 		}
 
-		/* #copyright {
-			font-size: 14px;
-			padding-top: 40px;
-			padding-bottom: 0;
-			text-align: center;
-		} */
+		#copy {
+			font-size: 20px;
+			padding-top: 0px;
+			padding-bottom: 2px;
+			font-weight: 300;
+		}
 	</style>
 </head>
 
@@ -49,7 +49,7 @@
 	<form class="form-app">
 		<div class="form-label-group">
 			<label for="message" id="messageDisplay">Message for encryption:</label>
-			<input type="email" id="message" class="form-control" placeholder="Message for encryption" required autofocus>
+			<input type="text" id="message" class="form-control" placeholder="Message for encryption" required autofocus>
 		</div>
 		<br>
 		<div class="form-label-group">
@@ -64,11 +64,9 @@
 				<input type="radio" name="encrypt_decrypt" value="decrypt-me" id="decrypt-me" onclick="uiState(1)"><label for="decrypt-me" id="radDe">Decrypt</label>
 			</label>
 		</div>
-		<br>
-		<button class="btn btn-lg btn-dark btn-block" type="submit" id='cryptonyte'>Encrypt</button>
-		<!-- It's best to add copyright and other information into the Info window -->
-		<!-- <p class="mt-5 mb-3 text-muted text-center" id="copyright">&copy; 2018 Ashish H. Shetty</p> -->
+		<button class="btn btn-lg btn-dark btn-block" type="button" id='cryptonyte'>Encrypt</button>
 		<p id=output>Encrypted message appears here</p>
+		<button class="btn btn-lg btn-dark btn-block clipboard" data-clipboard-target="#output" ="" type="button" id='copy'>Copy encrypted message to clipboard</button>
 	</form>
 
 
@@ -87,6 +85,17 @@
 	<script src="bootstrap/bootstrap.min.js"></script>
 	<!-- index.js --our JavaScript file -->
 	<script src="index.js"></script>
+	<!-- clipboard.js -->
+	<script src="../node_modules/clipboard/dist/clipboard.min.js"></script>
+
+	<!-- The below script will make sure that user will not be able to enter .+_e into the key field which is possible by default in HTML number type input fields -->
+	<script>
+		document.querySelector("#key").addEventListener("keypress", function (evt) {
+				if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
+					evt.preventDefault();
+				}
+		});
+	</script>
 </body>
 
 </html>

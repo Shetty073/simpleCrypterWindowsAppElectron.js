@@ -10,6 +10,7 @@ function uiState(mode) {
 		document.getElementById("output").innerHTML = "Encrypted message appears here"
 		document.getElementById("message").placeholder = "Message for encryption"
 		document.getElementById("key").placeholder = "Key for encryption"
+		document.getElementById("copy").innerHTML = "Copy encrypted message to clipboard"
 	} else if (mode == 1) {
 		document.getElementById("messageDisplay").innerHTML = "Message for decryption:"
 		document.getElementById("keyDisplay").innerHTML = "Key for decryption:"
@@ -17,6 +18,7 @@ function uiState(mode) {
 		document.getElementById("output").innerHTML = "Decrypted message appears here"
 		document.getElementById("message").placeholder = "Message for decryption"
 		document.getElementById("key").placeholder = "Key for decryption"
+		document.getElementById("copy").innerHTML = "Copy decrypted message to clipboard"
 	}
 }
 
