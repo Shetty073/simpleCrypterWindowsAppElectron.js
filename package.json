@@ -20,5 +20,13 @@
     "clipboard": "^2.0.1",
     "electron-context-menu": "^0.10.0",
     "open": "0.0.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shetty073/simpleCrypterWindowsAppElectron.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Shetty073/simpleCrypterWindowsAppElectron.js/issues"
+  },
+  "homepage": "https://github.com/Shetty073/simpleCrypterWindowsAppElectron.js#readme"
 }
